@@ -26,7 +26,7 @@ const Home = () => {
   const router = useRouter();
 
   const handleUserTypeSelection = (type: "candidate" | "recruiter") => {
-    router.push(`/chat?type=${type}`);
+    router.push(`/chat?userType=${type}`);
   };
 
   return (

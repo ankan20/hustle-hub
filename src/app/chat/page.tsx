@@ -7,6 +7,9 @@ import { FileText, MessageSquare, Upload, Briefcase, User } from "lucide-react"
 import { AppSidebar } from "@/components/app-sidebar/AppSidebar"
 import ResumeJDMatching from "@/components/ResumeJDMatching/ResumeJDMatching"
 import ResumeQuestionsPage from "@/components/ResumeQuestionsPage/ResumeQuestionsPage"
+import BattleList from "@/components/BattleList"
+import CreateBattle from "@/components/CreateBattle"
+import RecruiterBattleList from "@/components/RecruiterBattleList"
 
 export default function ChatPage() {
   const searchParams = useSearchParams()
@@ -38,9 +41,24 @@ export default function ChatPage() {
       case "jd-analysis":
         return <div className="text-center text-white">📑 JD Analysis Component</div>
       case "mock-questions":
-        return <div className="text-center text-white">🗣️ Mock Questions Component
-
-        </div>
+        return <div className="text-center text-white">🗣️ Mock Questions Component</div>
+      case "battle-listings":
+          return (
+            <>
+              <BattleList />
+            </>
+          )
+      case "create-battle":
+        return (
+          <CreateBattle />
+        )
+      case "your-battles":
+        return (
+          <>
+            <RecruiterBattleList />
+          </>
+        )
+        
       default:
         return (
           <div className="flex flex-col items-center justify-center h-full text-white text-center space-y-4">
